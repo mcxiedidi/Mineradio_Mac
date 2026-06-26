@@ -9,7 +9,8 @@
   "scripts": {
     "start": "electron .",
     "build:win": "electron-builder --win nsis",
-    "build:win:dir": "electron-builder --win dir"
+    "build:win:dir": "electron-builder --win dir",
+    "build:mac": "electron-builder --mac"
   },
   "build": {
     "appId": "com.mineradio.desktop",
@@ -33,6 +34,13 @@
       "public/index.html"
     ],
     "asar": false,
+    "mac": {
+      "target": [
+        { "target": "dmg", "arch": ["x64", "arm64"] },
+        { "target": "zip", "arch": ["x64", "arm64"] }
+      ],
+      "artifactName": "Mineradio-${version}-${arch}.${ext}"
+    },
     "win": {
       "executableName": "Mineradio",
       "icon": "build/icon.ico",
@@ -40,9 +48,7 @@
       "target": [
         {
           "target": "nsis",
-          "arch": [
-            "x64"
-          ]
+          "arch": ["x64"]
         }
       ]
     },
