@@ -46,10 +46,7 @@
       "icon": "build/icon.ico",
       "signAndEditExecutable": false,
       "target": [
-        {
-          "target": "nsis",
-          "arch": ["x64"]
-        }
+        { "target": "nsis", "arch": ["x64"] }
       ]
     },
     "nsis": {
@@ -68,11 +65,7 @@
       "artifactName": "Mineradio-${version}-Setup.${ext}"
     },
     "publish": [
-      {
-        "provider": "github",
-        "owner": "XxHuberrr",
-        "repo": "Mineradio"
-      }
+      { "provider": "github", "owner": "XxHuberrr", "repo": "Mineradio" }
     ]
   },
   "mineradio": {
