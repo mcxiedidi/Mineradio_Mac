@@ -89,7 +89,10 @@
   },
   "devDependencies": {
     "electron": "^42.4.1",
-    "electron-builder": "^26.15.3",
+    "electron-builder": "24.13.3",
     "rcedit": "^5.0.2"
+  },
+  "overrides": {
+    "@noble/hashes": "2.0.0"
   }
 }
