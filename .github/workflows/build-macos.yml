@@ -28,7 +28,7 @@ jobs:
 
       # 打包 Mac 版本（dmg / zip）
       - name: Build macOS app
-        run: npm run build:mac
+        run: npx electron-builder --mac --publish never
 
       # 一键上传到 Release！
       - name: Upload to Release
